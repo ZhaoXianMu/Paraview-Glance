@@ -12,6 +12,7 @@ import FileLoader from 'paraview-glance/src/components/core/FileLoader';
 import Landing from 'paraview-glance/src/components/core/Landing';
 import LayoutView from 'paraview-glance/src/components/core/LayoutView';
 import Screenshots from 'paraview-glance/src/components/core/Screenshots';
+import VideoChat from 'paraview-glance/src/components/core/VideoChat';
 import StateFileGenerator from 'paraview-glance/src/components/core/StateFileGenerator';
 import SvgIcon from 'paraview-glance/src/components/widgets/SvgIcon';
 import CollapsibleToolbar from 'paraview-glance/src/components/widgets/CollapsibleToolbar';
@@ -37,6 +38,7 @@ export default {
     Landing,
     LayoutView,
     Screenshots,
+    VideoChat,
     StateFileGenerator,
     SvgIcon,
     VBottomSheet,
@@ -56,6 +58,7 @@ export default {
       autoloadLabel: '',
       internalControlsDrawer: true,
       screenshotsDrawer: false,
+      videoChatDrawer: false,
       screenshotCount: 0,
       errors: [],
       globalSingleNotification: '',

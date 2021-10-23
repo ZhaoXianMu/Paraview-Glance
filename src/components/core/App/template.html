@@ -90,6 +90,16 @@
               </span>
             </collapsible-toolbar-item>
             <collapsible-toolbar-item
+              v-show="!landingVisible"
+              v-on:click="videoChatDrawer = true"
+              :state="state"
+            >
+              <v-icon left>mdi-chat-processing</v-icon>
+              <span v-show="state !== 'dense'">
+                Video Chat
+              </span>
+            </collapsible-toolbar-item>
+            <collapsible-toolbar-item
               v-on:click="aboutDialog = true"
               :state="state"
             >
@@ -128,6 +138,23 @@
         <screenshots
           v-on:screenshot-count="screenshotCount = $event"
           v-on:close="screenshotsDrawer = false"
+        />
+      </v-navigation-drawer>
+
+      <v-navigation-drawer
+        v-model="videoChatDrawer"
+        app
+        right
+        temporary
+        touchless
+        width="500"
+      >
+        <!-- <videochat
+          v-on:videochat-count="videoChatCount = $event"
+          v-on:close="videoChatDrawer = false"
+        /> -->
+        <video-chat
+          v-on:close="videoChatDrawer = false"
         />
       </v-navigation-drawer>
 

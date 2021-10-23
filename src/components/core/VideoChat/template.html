@@ -1,0 +1,27 @@
+<div :class="$style.container">
+  <v-toolbar
+    color="transparent"
+    flat
+    class="flex-grow-0"
+  >
+    <v-toolbar-title>Video Chat</v-toolbar-title>
+    <v-spacer />
+    <v-btn
+      icon
+      v-on:click="$emit('close')"
+    >
+      <v-icon>mdi-arrow-right</v-icon>
+    </v-btn>
+  </v-toolbar>
+  
+  <div
+    v-show="!atLeastOneScreenshot"
+    :class="$style.emptyState"
+  >
+    <div id="app">
+      <vue-webrtc ref="webrtc" width="100%" roomId="sample-room"/>
+      Room: sample-room
+    </div>
+
+  </div>
+</div>

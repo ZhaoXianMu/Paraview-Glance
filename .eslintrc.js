@@ -29,7 +29,7 @@ module.exports = {
       }
     },
     rules: {
-      'prettier/prettier': ['error', prettierConf],
+      'prettier/prettier': 0,
 
       'no-console': 0,
       'prefer-destructuring': 0,
